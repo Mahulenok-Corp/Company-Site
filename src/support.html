@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support — {{orgName}}</title>
+  <meta name="description" content="Support for {{orgName}} apps: contact details, frequently asked questions, refunds, and account and data deletion requests.">
+  <link rel="canonical" href="{{siteUrl}}/support.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>:root { --accent: {{accentColor}}; }</style>
+</head>
+<body>
+{{> header}}
+
+<main id="main" class="page">
+  <div class="container">
+    <header class="page-header">
+      <h1>Support</h1>
+      <p class="meta">We usually reply within two business days.</p>
+    </header>
+
+    <div class="prose">
+      <h2>Contact support</h2>
+      <p>For help with any of our apps, email <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>. Please include the name of the app, your device model, the Android version and a description of the problem. Screenshots or a screen recording help us resolve issues faster.</p>
+
+      <h2>Frequently asked questions</h2>
+      <!-- EDIT: адаптируйте вопросы под свои приложения -->
+      <h3>The app does not start or crashes</h3>
+      <p>Make sure you have the latest version from Google Play and that your device meets the minimum requirements shown on the store page. Restarting the device resolves most issues. If the problem persists, contact us with the details above.</p>
+
+      <h3>I was charged but did not receive my purchase</h3>
+      <p>Purchases are processed by Google Play. Restart the app to restore your purchases. If the item is still missing, write to us and include the order number from your Google Play receipt (it starts with <code>GPA.</code>).</p>
+
+      <h3>How do I request a refund?</h3>
+      <p>Refunds for purchases made through Google Play follow the <a href="https://support.google.com/googleplay/answer/2479637" rel="noopener">Google Play refund policy</a>. You can request a refund from your Google Play order history or by contacting us.</p>
+
+      <h3>How do I report a bug or suggest a feature?</h3>
+      <p>Email us with "Bug report" or "Feature request" in the subject line. We read every message.</p>
+
+      <h2 id="delete-account">Account and data deletion</h2>
+      <p>You can request deletion of your account (where an app offers accounts) and of the personal data associated with it at any time:</p>
+      <ol>
+        <li>Send an email to <a href="mailto:{{supportEmail}}?subject=Data%20deletion%20request">{{supportEmail}}</a> with the subject "Data deletion request", from the email address linked to your account.</li>
+        <li>Tell us which app the request concerns and, if applicable, your account identifier or nickname.</li>
+        <li>We will confirm the request and delete your account and the associated data within 30 days. Some records may be retained where the law requires it (for example, purchase records for accounting purposes).</li>
+      </ol>
+      <p>Uninstalling an app stops all data collection by that app, but it does not by itself delete data already stored on our servers. Please use the procedure above if you want your data removed.</p>
+      <div class="note">
+        <p>Some of our apps work entirely on your device, do not create accounts and do not store your data on our servers. In that case, uninstalling the app removes all of its data.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+{{> footer}}
+</body>
+</html>

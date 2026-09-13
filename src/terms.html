@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Use — {{orgName}}</title>
+  <meta name="description" content="Terms of Use for the website and mobile applications published by {{orgName}}.">
+  <link rel="canonical" href="{{siteUrl}}/terms.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>:root { --accent: {{accentColor}}; }</style>
+</head>
+<body>
+{{> header}}
+
+<main id="main" class="page">
+  <div class="container">
+    <header class="page-header">
+      <h1>Terms of Use</h1>
+      <p class="meta">Last updated: {{lastUpdated}}</p>
+    </header>
+
+    <div class="prose">
+      <p>These Terms of Use ("Terms") govern your access to and use of the website at <a href="{{siteUrl}}/">{{domain}}</a> (the "Website") and the mobile applications and games published by {{legalName}} ("{{orgName}}", "we", "us" or "our") (the "Apps"; together with the Website, the "Services"). By using the Services you agree to these Terms. If you do not agree, do not use the Services.</p>
+
+      <h2>1. Use of the Services</h2>
+      <p>Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable licence to install and use the Apps on Android devices that you own or control, for your personal, non-commercial use, in accordance with the Google Play Terms of Service.</p>
+      <p>You must be at least 13 years old (or the minimum age required in your country) to use the Services. If you are under 18, you may use the Services only with the permission of a parent or guardian.</p>
+
+      <h2>2. Accounts</h2>
+      <p>Some Apps may allow you to create an account or sign in with a third-party service. You are responsible for keeping your credentials secure and for all activity under your account. You can request deletion of your account at any time as described on our <a href="support.html#delete-account">Support page</a>.</p>
+
+      <h2>3. Purchases and subscriptions</h2>
+      <p>Some Apps offer in-app purchases or subscriptions. All purchases are processed by Google Play, and the Google Play Terms of Service and refund policy apply to them. Prices may change at any time; changes do not affect purchases already made. Subscriptions renew automatically unless cancelled in your Google Play account settings at least 24 hours before the end of the current period.</p>
+
+      <h2>4. Intellectual property</h2>
+      <p>The Services, including all software, graphics, audio, text and other content, are owned by {{legalName}} or its licensors and are protected by copyright, trademark and other laws. Except for the licence granted above, no rights are transferred to you. You may not copy, modify, distribute, sell, lease, reverse-engineer or create derivative works from any part of the Services, except to the extent permitted by applicable law.</p>
+
+      <h2>5. Prohibited conduct</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>use the Services for any unlawful purpose or in violation of these Terms;</li>
+        <li>use cheats, bots, automation tools, exploits or unauthorised third-party software that interacts with the Apps;</li>
+        <li>interfere with or disrupt the Services or the servers and networks connected to them;</li>
+        <li>attempt to gain unauthorised access to accounts, systems or data;</li>
+        <li>harass, abuse or harm other users, or submit content that is illegal, offensive or infringes the rights of others.</li>
+      </ul>
+
+      <h2>6. User content</h2>
+      <p>If an App allows you to submit content (such as nicknames, messages or images), you retain ownership of it and grant us a worldwide, royalty-free licence to use, store, display and distribute it as necessary to operate the Services. You are solely responsible for your content and confirm that you have the rights to share it.</p>
+
+      <h2>7. Availability and changes</h2>
+      <p>We may modify, suspend or discontinue any part of the Services at any time, with or without notice, and may release updates that change or remove features. We are not liable for any modification, suspension or discontinuation of the Services.</p>
+
+      <h2>8. Disclaimer of warranties</h2>
+      <p>The Services are provided "as is" and "as available", without warranties of any kind, whether express or implied, including implied warranties of merchantability, fitness for a particular purpose and non-infringement. We do not warrant that the Services will be uninterrupted, error-free or secure.</p>
+
+      <h2>9. Limitation of liability</h2>
+      <p>To the maximum extent permitted by law, {{legalName}} and its officers, employees and partners shall not be liable for any indirect, incidental, special, consequential or punitive damages, or for any loss of data, profits or goodwill, arising out of or related to your use of the Services. Our total liability for any claim relating to the Services shall not exceed the amount you paid us, if any, in the 12 months before the claim arose.</p>
+
+      <h2>10. Termination</h2>
+      <p>We may suspend or terminate your access to the Services at any time if you breach these Terms. You may stop using the Services at any time by uninstalling the Apps. Sections 4, 8, 9 and 11 survive termination.</p>
+
+      <h2>11. Governing law</h2>
+      <!-- EDIT: укажите применимое право и юрисдикцию -->
+      {{#country}}
+      <p>These Terms are governed by the laws of {{country}}, without regard to its conflict-of-law rules. Any dispute arising out of these Terms shall be resolved by the competent courts of {{country}}, unless mandatory consumer-protection law in your country of residence provides otherwise.</p>
+      {{/country}}
+      {{^country}}
+      <p>These Terms are governed by the laws of the country in which {{legalName}} is registered, without regard to its conflict-of-law rules, unless mandatory consumer-protection law in your country of residence provides otherwise.</p>
+      {{/country}}
+
+      <h2>12. Changes to these Terms</h2>
+      <p>We may update these Terms from time to time. The updated version will be posted on this page with a new "Last updated" date. Continued use of the Services after the changes take effect constitutes acceptance of the new Terms.</p>
+
+      <h2>13. Contact</h2>
+      <p>Questions about these Terms: <a href="mailto:{{email}}">{{email}}</a></p>
+      <p>{{legalName}}{{#address}}<br>{{address}}{{/address}}</p>
+    </div>
+  </div>
+</main>
+
+{{> footer}}
+</body>
+</html>

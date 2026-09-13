@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found — {{orgName}}</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="{{basePath}}/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="{{basePath}}/assets/style.css">
+  <style>:root { --accent: {{accentColor}}; }</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="{{basePath}}/"><img src="{{basePath}}/assets/logo.svg" alt="" width="30" height="30">{{orgName}}</a>
+    </div>
+  </header>
+  <main id="main" class="page">
+    <div class="container empty">
+      <h1>404</h1>
+      <p>The page you are looking for does not exist or has been moved.</p>
+      <a class="btn btn-primary" href="{{basePath}}/">Back to home</a>
+    </div>
+  </main>
+</body>
+</html>

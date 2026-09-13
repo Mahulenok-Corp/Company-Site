@@ -1,0 +1,14 @@
+{
+  "name": "organization-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static organization website for Google Play Console verification",
+  "type": "module",
+  "scripts": {
+    "build": "node configure.mjs",
+    "preview": "node configure.mjs && node serve.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

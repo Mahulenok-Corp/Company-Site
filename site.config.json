@@ -1,0 +1,31 @@
+{
+  "orgName": "IE Ivan Baikov",
+  "legalName": "IE Ivan Baikov",
+  "domain": "mahulenok-corp.github.io",
+  "siteUrl": "https://mahulenok-corp.github.io/Company-Site",
+  "email": "lewnup@gmail.com",
+  "supportEmail": "lewnup@gmail.com",
+  "address": "",
+  "country": "Kazakhstan",
+
+  "heroLabel": "Independent software developer",
+  "tagline": "Mobile apps and games, built with care.",
+  "description": "IE Ivan Baikov is an independent software developer registered in Kazakhstan. We design, develop and publish mobile applications and games for Android and iOS.",
+  "about": [
+    "IE Ivan Baikov is a sole proprietorship (individual entrepreneur) registered in the Republic of Kazakhstan. We design, develop and publish mobile applications and games for Android and iOS, together with the backend services that power them.",
+    "We care about the details: fast and lightweight apps, honest monetisation and respect for our users' privacy. Every product is built and maintained in-house, from the first prototype to long-term support after release.",
+    "Our applications are distributed through Google Play under the IE Ivan Baikov developer account."
+  ],
+  "facts": [
+    { "label": "Legal form", "value": "Individual entrepreneur" },
+    { "label": "Registered in", "value": "Kazakhstan" },
+    { "label": "Platforms", "value": "Android, iOS" },
+    { "label": "Development", "value": "In-house" }
+  ],
+  "apps": [],
+
+  "accentColor": "#2f5bea",
+  "logoLetter": "B",
+  "googleSiteVerification": "",
+  "lastUpdated": "2026-09-13"
+}

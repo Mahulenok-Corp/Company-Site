@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{siteUrl}}/</loc><lastmod>{{lastUpdated}}</lastmod></url>
+  <url><loc>{{siteUrl}}/privacy.html</loc><lastmod>{{lastUpdated}}</lastmod></url>
+  <url><loc>{{siteUrl}}/terms.html</loc><lastmod>{{lastUpdated}}</lastmod></url>
+  <url><loc>{{siteUrl}}/support.html</loc><lastmod>{{lastUpdated}}</lastmod></url>
+</urlset>

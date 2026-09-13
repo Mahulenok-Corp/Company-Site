@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — {{orgName}}</title>
+  <meta name="description" content="Privacy Policy of {{orgName}}: what information our website and mobile applications collect, how it is used, and the choices you have.">
+  <link rel="canonical" href="{{siteUrl}}/privacy.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>:root { --accent: {{accentColor}}; }</style>
+</head>
+<body>
+{{> header}}
+
+<main id="main" class="page">
+  <div class="container">
+    <header class="page-header">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: {{lastUpdated}}</p>
+    </header>
+
+    <div class="prose">
+      <p>This Privacy Policy describes how {{legalName}} ("{{orgName}}", "we", "us" or "our") collects, uses and shares information when you visit our website at <a href="{{siteUrl}}/">{{domain}}</a> (the "Website") or use the mobile applications and games that we publish (the "Apps"). The Website and the Apps are together referred to as the "Services".</p>
+      <p>By using the Services you agree to the practices described in this Policy. If you do not agree, please do not use the Services.</p>
+
+      <h2>1. Information we collect</h2>
+      <h3>Information you provide to us</h3>
+      <p>When you contact us by email, send a support request or otherwise communicate with us, we receive the information you choose to share, such as your name, email address and the content of your message.</p>
+
+      <h3>Information collected automatically</h3>
+      <p>When you use the Apps, we and our service providers may automatically collect certain technical information, including:</p>
+      <ul>
+        <li>device information (model, operating system version, language, screen size);</li>
+        <li>app information (version, installation and update events);</li>
+        <li>usage data (screens viewed, features used, session duration, in-app events);</li>
+        <li>crash reports and performance diagnostics;</li>
+        <li>approximate location derived from your IP address;</li>
+        <li>advertising identifiers (such as the Google Advertising ID) in Apps that show advertising.</li>
+      </ul>
+      <p>The Website does not use cookies or tracking pixels and does not collect personal information unless you contact us.</p>
+      <!-- EDIT: если на сайте есть аналитика (Google Analytics, Метрика и т. п.), опишите её здесь -->
+
+      <h2>2. How we use information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>provide, operate and maintain the Services;</li>
+        <li>respond to your questions and support requests;</li>
+        <li>understand how the Apps are used and improve them;</li>
+        <li>detect, prevent and fix crashes, bugs and security issues;</li>
+        <li>show and measure advertising in Apps that contain ads;</li>
+        <li>comply with legal obligations and enforce our <a href="terms.html">Terms of Use</a>.</li>
+      </ul>
+
+      <h2>3. Third-party services</h2>
+      <p>Our Apps may include software development kits (SDKs) provided by third parties that collect information under their own privacy policies. Depending on the App, these may include:</p>
+      <!-- EDIT: оставьте только те сервисы, которые реально используются в ваших приложениях -->
+      <ul>
+        <li><a href="https://policies.google.com/privacy" rel="noopener">Google Play Services</a> — distribution, updates and in-app purchases through Google Play;</li>
+        <li><a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase</a> (Analytics, Crashlytics) — usage analytics and crash reporting;</li>
+        <li><a href="https://support.google.com/admob/answer/6128543" rel="noopener">Google AdMob</a> — advertising in ad-supported Apps.</li>
+      </ul>
+      <p>We do not sell your personal information.</p>
+
+      <h2>4. How we share information</h2>
+      <p>We share information only in the following circumstances:</p>
+      <ul>
+        <li>with service providers that help us operate the Services (hosting, analytics, crash reporting, advertising) and that may use it only on our behalf;</li>
+        <li>when required by law, regulation or legal process, or to protect the rights, property or safety of {{orgName}}, our users or others;</li>
+        <li>in connection with a merger, acquisition or sale of assets, in which case we will notify you before your information becomes subject to a different privacy policy.</li>
+      </ul>
+
+      <h2>5. Data retention</h2>
+      <p>We keep personal information only for as long as necessary for the purposes described in this Policy, unless a longer retention period is required by law. Support correspondence is kept for up to 24 months after the request is resolved. Analytics and crash data are retained according to the retention settings of the respective service provider.</p>
+      <!-- EDIT: скорректируйте сроки хранения под вашу практику -->
+
+      <h2>6. Security</h2>
+      <p>We use reasonable technical and organisational measures to protect information against unauthorised access, loss or misuse. No method of transmission or storage is completely secure, so we cannot guarantee absolute security.</p>
+
+      <h2>7. Children's privacy</h2>
+      <p>Our Services are not directed to children under the age of 13 (or the minimum age required in your country), and we do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will delete it.</p>
+      <!-- EDIT: если приложения предназначены для детей (Google Play Families), этот раздел нужно переписать -->
+
+      <h2>8. Your rights and choices</h2>
+      <p>Depending on where you live, you may have the right to access, correct, delete or restrict the use of your personal information, to object to its processing, and to receive a copy of it in a portable format. To exercise these rights, contact us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>. We respond within 30 days.</p>
+      <p>You can also:</p>
+      <ul>
+        <li>reset or delete your advertising identifier and opt out of personalised advertising in your device settings;</li>
+        <li>uninstall an App at any time to stop all data collection by that App;</li>
+        <li>request deletion of your account and associated data as described on our <a href="support.html#delete-account">Support page</a>.</li>
+      </ul>
+
+      <h2>9. International transfers</h2>
+      <p>Our service providers may process information in countries other than your own, including the United States. Where required, we rely on appropriate safeguards for such transfers, such as standard contractual clauses.</p>
+
+      <h2>10. Changes to this Policy</h2>
+      <p>We may update this Policy from time to time. The updated version will be posted on this page with a new "Last updated" date. If the changes are material, we will provide additional notice in the affected Apps.</p>
+
+      <h2>11. Contact us</h2>
+      <p>If you have questions about this Policy or our data practices, contact us:</p>
+      <p>{{legalName}}{{#address}}<br>{{address}}{{/address}}<br>Email: <a href="mailto:{{email}}">{{email}}</a></p>
+    </div>
+  </div>
+</main>
+
+{{> footer}}
+</body>
+</html>

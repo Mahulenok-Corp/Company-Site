@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{orgName}} — {{tagline}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="{{siteUrl}}/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>:root { --accent: {{accentColor}}; }</style>
+  <meta name="theme-color" content="{{accentColor}}">
+  {{#googleSiteVerification}}<meta name="google-site-verification" content="{{googleSiteVerification}}">{{/googleSiteVerification}}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{orgName}}">
+  <meta property="og:title" content="{{orgName}} — {{tagline}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{siteUrl}}/">
+  <script type="application/ld+json">
+{{{jsonLd}}}
+  </script>
+</head>
+<body>
+{{> header}}
+
+<main id="main">
+  <section class="hero">
+    <div class="container">
+      {{#heroLabel}}<span class="eyebrow">{{heroLabel}}</span>{{/heroLabel}}
+      <h1>{{tagline}}</h1>
+      <p class="lead">{{description}}</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#apps">Our apps</a>
+        <a class="btn btn-secondary" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container about">
+      <div>
+        <h2>About {{orgName}}</h2>
+        {{#about}}
+        <p>{{.}}</p>
+        {{/about}}
+      </div>
+      <dl class="facts">
+        {{#facts}}
+        <div class="fact"><dt>{{label}}</dt><dd>{{value}}</dd></div>
+        {{/facts}}
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="apps">
+    <div class="container">
+      <h2>Our apps</h2>
+      {{#hasApps}}
+      <p class="intro">Applications and games published by {{orgName}} on Google Play.</p>
+      <div class="grid">
+        {{#apps}}
+        <article class="card">
+          {{#status}}<span class="badge">{{status}}</span>{{/status}}
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+          {{#url}}<a class="btn btn-secondary btn-sm" href="{{url}}" rel="noopener">View on Google Play</a>{{/url}}
+        </article>
+        {{/apps}}
+      </div>
+      {{/hasApps}}
+      {{^hasApps}}
+      <p class="intro">Our first applications are currently in development and will be published on Google Play soon. Follow this page for updates.</p>
+      {{/hasApps}}
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="intro">Questions, partnership proposals or press enquiries — we would love to hear from you.</p>
+      <ul class="contact-list">
+        <li><span class="label">Email</span><a href="mailto:{{email}}">{{email}}</a></li>
+        <li><span class="label">Support</span><a href="mailto:{{supportEmail}}">{{supportEmail}}</a></li>
+        <li><span class="label">Legal entity</span><span class="value">{{legalName}}</span></li>
+        {{#address}}<li><span class="label">Address</span><span class="value">{{address}}</span></li>{{/address}}
+      </ul>
+    </div>
+  </section>
+</main>
+
+{{> footer}}
+</body>
+</html>

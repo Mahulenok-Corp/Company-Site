@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Organization website — single stylesheet, no build step.
+   The accent colour is injected from site.config.json as --accent.
+   ========================================================================== */
+
+:root {
+  --accent: #2f5bea;
+  --bg: #f8f8f6;
+  --surface: #ffffff;
+  --text: #16181d;
+  --muted: #5f6573;
+  --border: #e4e5e1;
+  --shadow: 0 1px 2px rgba(22, 24, 29, .04), 0 10px 30px -12px rgba(22, 24, 29, .12);
+  --radius: 16px;
+  --max: 1080px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1114;
+    --surface: #171a1f;
+    --text: #edeff3;
+    --muted: #9aa2b1;
+    --border: #262a32;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 10px 30px -12px rgba(0, 0, 0, .6);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { margin: 0; font-family: var(--font); font-size: 17px; line-height: 1.6; color: var(--text); background: var(--bg); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img, svg { max-width: 100%; height: auto; }
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.02em; font-weight: 700; }
+.container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.skip-link { position: absolute; left: -999px; top: 8px; z-index: 100; padding: 8px 12px; border-radius: 8px; background: var(--surface); }
+.skip-link:focus { left: 8px; }
+
+/* Header ---------------------------------------------------------------- */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; color: var(--text); }
+.brand:hover { text-decoration: none; }
+.brand img { width: 30px; height: 30px; border-radius: 8px; }
+.nav { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+.nav a { padding: 8px 12px; border-radius: 8px; font-weight: 500; color: var(--muted); }
+.nav a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); text-decoration: none; }
+
+/* Hero ------------------------------------------------------------------ */
+.hero { position: relative; overflow: hidden; padding: clamp(72px, 12vw, 128px) 0 clamp(56px, 8vw, 96px); }
+.hero::before {
+  content: ""; position: absolute; top: -30%; right: -10%;
+  width: min(70vw, 760px); aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--accent) 24%, transparent), transparent);
+  pointer-events: none;
+}
+.hero .container { position: relative; }
+.eyebrow { display: inline-block; margin-bottom: 20px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.hero h1 { margin: 0 0 20px; max-width: 18ch; font-size: clamp(2.3rem, 6vw, 4rem); }
+.hero .lead { margin: 0 0 36px; max-width: 58ch; font-size: clamp(1.1rem, 2.2vw, 1.35rem); color: var(--muted); }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 22px; border-radius: 12px; border: 1px solid transparent;
+  font-weight: 600; line-height: 1.2;
+  transition: transform .12s ease, filter .12s ease, border-color .12s ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-secondary { background: var(--surface); color: var(--text); border-color: var(--border); }
+.btn-secondary:hover { border-color: var(--muted); }
+.btn-sm { padding: 9px 16px; font-size: 0.95rem; }
+
+/* Sections -------------------------------------------------------------- */
+.section { padding: clamp(56px, 8vw, 88px) 0; border-top: 1px solid var(--border); }
+.section h2 { margin: 0 0 12px; font-size: clamp(1.7rem, 3.5vw, 2.3rem); }
+.section .intro { margin: 0 0 36px; max-width: 60ch; font-size: 1.05rem; color: var(--muted); }
+.grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.card {
+  display: flex; flex-direction: column; align-items: flex-start;
+  padding: 26px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.card h3 { margin: 0 0 8px; font-size: 1.2rem; }
+.card p { margin: 0 0 20px; color: var(--muted); }
+.card .btn { margin-top: auto; }
+.badge {
+  display: inline-block; margin-bottom: 14px; padding: 4px 10px; border-radius: 999px;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em;
+  background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent);
+}
+
+/* About ----------------------------------------------------------------- */
+.about { display: grid; gap: 48px; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: start; }
+.about p { margin: 0 0 16px; }
+.facts { display: grid; gap: 12px; margin: 0; }
+.fact {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  padding: 16px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+}
+.fact dt { font-size: 0.95rem; color: var(--muted); }
+.fact dd { margin: 0; font-weight: 600; text-align: right; }
+@media (max-width: 760px) { .about { grid-template-columns: 1fr; gap: 28px; } }
+
+/* Contact --------------------------------------------------------------- */
+.contact-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.contact-list li { padding: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
+.contact-list .label { display: block; margin-bottom: 8px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.contact-list .value, .contact-list a { font-weight: 600; color: var(--text); overflow-wrap: anywhere; }
+.contact-list a:hover { color: var(--accent); }
+
+/* Footer ---------------------------------------------------------------- */
+.site-footer { padding: 36px 0; border-top: 1px solid var(--border); font-size: 0.95rem; color: var(--muted); }
+.site-footer .container { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.site-footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.site-footer a { color: var(--muted); }
+.site-footer a:hover { color: var(--text); }
+
+/* Text pages: privacy, terms, support ----------------------------------- */
+.page { padding: clamp(48px, 7vw, 80px) 0 clamp(64px, 8vw, 96px); }
+.page > .container { max-width: 800px; }
+.page-header { margin-bottom: 36px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
+.page-header h1 { margin: 0 0 10px; font-size: clamp(2rem, 4.5vw, 2.8rem); }
+.page-header .meta { margin: 0; color: var(--muted); }
+.prose h2 { margin: 44px 0 14px; font-size: 1.4rem; }
+.prose h3 { margin: 28px 0 8px; font-size: 1.1rem; }
+.prose p { margin: 0 0 16px; }
+.prose ul, .prose ol { margin: 0 0 16px; padding-left: 24px; }
+.prose li { margin-bottom: 6px; }
+.prose li::marker { color: var(--muted); }
+.note { margin: 28px 0; padding: 16px 20px; background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 12px; }
+.note p:last-child { margin-bottom: 0; }
+
+/* 404 ------------------------------------------------------------------- */
+.empty { padding: clamp(80px, 15vw, 160px) 0; text-align: center; }
+.empty h1 { margin: 0 0 12px; font-size: clamp(2.2rem, 6vw, 4rem); }
+.empty p { margin: 0 0 28px; color: var(--muted); }
+
+/* Small screens --------------------------------------------------------- */
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .site-header .container { flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+  .nav { justify-content: flex-start; margin-left: -12px; }
+  .fact { flex-direction: column; gap: 2px; }
+  .fact dd { text-align: left; }
+}

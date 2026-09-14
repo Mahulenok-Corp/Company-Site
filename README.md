@@ -6,19 +6,13 @@
 
 ## Этот репозиторий: Mahulenok-Corp/Company-Site
 
-Сайт настроен на адрес GitHub Pages **https://mahulenok-corp.github.io/Company-Site/**, пока у организации нет собственного домена.
+Сайт настроен на домен **https://mahcorp.xyz**. Публикуется через GitHub Actions на GitHub Pages; до привязки домена он доступен по адресу https://mahulenok-corp.github.io/Company-Site/.
 
-Чтобы сайт опубликовался:
+Чтобы домен заработал:
 
-1. В репозитории откройте **Settings → Pages → Build and deployment → Source** и выберите **GitHub Actions**. Workflow из `.github/workflows/deploy.yml` уже запущен пушем; после включения Pages перезапустите его на вкладке **Actions** (Re-run jobs) или сделайте любой новый пуш.
-2. Через 1–2 минуты откройте https://mahulenok-corp.github.io/Company-Site/.
-3. Репозиторий должен быть публичным: для приватных репозиториев организации GitHub Pages доступен только на платных планах.
-
-Когда появится собственный домен (рекомендуется для Play Console, см. ниже):
-
-1. В `site.config.json` поменяйте `domain` на `mystudio.com`, а `siteUrl` очистите (`""`).
-2. Добавьте DNS-записи из раздела «Вариант A — GitHub Pages» и укажите домен в **Settings → Pages → Custom domain**.
-3. Запушьте изменения — сайт пересоберётся под новый адрес.
+1. Владелец домена добавляет DNS-записи из раздела «Вариант A — GitHub Pages» (четыре A-записи и CNAME для `www`), а также TXT-запись из Search Console.
+2. В репозитории: **Settings → Pages → Custom domain** → `mahcorp.xyz` → Save. После успешной проверки DNS включите **Enforce HTTPS**.
+3. Проверьте, что https://mahcorp.xyz открывается, затем подтверждайте домен в Search Console (шаг 4) и в Play Console (шаг 5).
 
 ## Коротко: что делать
 
